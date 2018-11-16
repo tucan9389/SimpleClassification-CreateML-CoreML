@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		55C41430219EE74B00FA0558 /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4142F219EE74B00FA0558 /* UIImage+CVPixelBuffer.swift */; };
-		55C41432219EE8E300FA0558 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55C41431219EE8E300FA0558 /* ImageClassifier.mlmodel */; };
+		55C41434219EEC2100FA0558 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55C41433219EEC2100FA0558 /* ImageClassifier.mlmodel */; };
 		55DF3E8521985C520080252C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF3E8421985C520080252C /* AppDelegate.swift */; };
 		55DF3E8721985C520080252C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF3E8621985C520080252C /* ViewController.swift */; };
 		55DF3E8A21985C520080252C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DF3E8821985C520080252C /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		55C4142F219EE74B00FA0558 /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
-		55C41431219EE8E300FA0558 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
+		55C41433219EEC2100FA0558 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 		55DF3E8121985C520080252C /* SimpleClassificationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleClassificationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DF3E8421985C520080252C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55DF3E8621985C520080252C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		55DF3E8321985C520080252C /* SimpleClassificationApp */ = {
 			isa = PBXGroup;
 			children = (
-				55C41431219EE8E300FA0558 /* ImageClassifier.mlmodel */,
+				55C41433219EEC2100FA0558 /* ImageClassifier.mlmodel */,
 				55DF3E8421985C520080252C /* AppDelegate.swift */,
 				55DF3E8621985C520080252C /* ViewController.swift */,
 				55C4142F219EE74B00FA0558 /* UIImage+CVPixelBuffer.swift */,
@@ -146,7 +146,7 @@
 				55DF3E8721985C520080252C /* ViewController.swift in Sources */,
 				55C41430219EE74B00FA0558 /* UIImage+CVPixelBuffer.swift in Sources */,
 				55DF3E8521985C520080252C /* AppDelegate.swift in Sources */,
-				55C41432219EE8E300FA0558 /* ImageClassifier.mlmodel in Sources */,
+				55C41434219EEC2100FA0558 /* ImageClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

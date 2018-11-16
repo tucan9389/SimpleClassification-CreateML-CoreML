@@ -25,7 +25,7 @@ Create ML로 나만의 Classifier 모델을 만들고 Core ML로 앱에서 사�
 
 여기서 주의할 점은 macOS 플랫폼을 선택하고 플레이그라운드를 만들어줘야 CreateML을 사용할 수 있습니다!<br>![project-createml-004](images/project-createml-004.png)
 
-플레이그라운드를 어느 프로젝트와 어느 그룹에 넣을지 정합니다. 저희는 `MyClassificationApp` 프로젝트에 추가하며, 이렇게 해야 모바일 프로젝트 안에 플레이그라운드 파일이 생성됩니다.<br>![project-createml-005](images/project-createml-005.png)
+플레이그라운드를 어느 프로젝트와 어느 그룹에 넣을지 정합니다. 여기서는 `MyClassificationApp` 프로젝트에 추가하며, 이렇게 해야 모바일 프로젝트 안에 플레이그라운드 파일이 생성됩니다.<br>![project-createml-005](images/project-createml-005.png)
 
 플레이그라운드가 모바일 프로젝트 안에 만들어졌음을 확인할 수 있습니다. 이제 Create ML 코드는 이 파일 안에 작성하면 됩니다.<br>![project-createml-006](images/project-createml-006.png)
 
@@ -75,7 +75,7 @@ $ googleimagesdownload -k "resistor" -l 30
 
 ### 6. 평가
 
-이번에는 내가 찍은 아두이노 사진을 테스트 데이터셋으로 넣어서 accuracy를 확인합니다.<br>![train-dataset](images/test-dataset.png)
+이번에는 직접 찍은 아두이노 사진을 테스트 데이터셋으로 넣어서 accuracy를 확인합니다.<br>![train-dataset](images/test-dataset.png)
 
 학습때와 마찬가지로 테스트 데이터셋 폴더를 Xcode에 드래그 & 드롭합니다<br>![playground-createml-002](images/playground-createml-validation-001.png)
 
@@ -93,6 +93,8 @@ $ googleimagesdownload -k "resistor" -l 30
 
 Create ML에서 만든 Core ML 모델을 Xcode에서 열어보면 다음 화면이 나타납니다(①). 이번에 만든 Classification 모델 크기는 165 KB(②), 소스코드상에서 모델을 불러올때는 `ImageClassifier` 클래스를 통해 불러옵니다(③). 이 모델의 입력 포맷은 299Ｘ299 컬러 이미지이며, 출력 포맷에는 카테고리별 확률이 들어간 Dictionary와 가장 높은 확률의 카테고리 이름이 있습니다(④).
 
+모델을 Xcode 프로젝트에 넣으면 자동으로 모델 이름의 클래스를 만들어 줍니다.  모델 이름의 클래스를 호출하여 코드상에서 모델을 사용할 수 있습니다.
+
 ![project-coreml-001](images/project-coreml-001.png)
 
 ### 2. 추론
@@ -108,7 +110,7 @@ let model = ImageClassifier()
 // predict
 if let result = try? model.prediction(image: pixelBuffer) {
     let predictedLabel = result.classLabel
-    let confidence = prediction.classLabelProbs[result.classLabel] ?? 0.0
+    let confidence = result.classLabelProbs[result.classLabel] ?? 0.0
     label.text = "\(predictedLabel), \(confidence)"
 }
 ```
@@ -136,5 +138,5 @@ if let result = try? model.prediction(image: pixelBuffer) {
   - [WWDC18 717 Session - Vision with Core ML](https://developer.apple.com/videos/play/wwdc2018/717/)
   - [WWDC18 713 Session - Introducing Natural Language Framework](https://developer.apple.com/videos/play/wwdc2018/713)
   - [WWDC18 712 Session - A Guide to Turi Create](https://developer.apple.com/videos/play/wwdc2018/712)
-- [iOS에서 머신러닝 슬라이드 자료](https://docs.google.com/presentation/d/1wA_PAjllpLLcFPuZcERYbQlPe1Ipb-bzIZinZg3zXkg/edit?usp=sharing)
+- [오픈세미나 - Machine Learning with Apple 슬라이드 자료](https://docs.google.com/presentation/d/1zbcwGroZoj7bRuTQKGcE-4PJbhSomtkJK0xov2C_HsE/edit?usp=sharing)
 - [MoTLabs Blog](https://motlabs.github.io/)

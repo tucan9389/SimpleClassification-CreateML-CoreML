@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         // predict
         if let result = try? model.prediction(image: pixelBuffer) {
             let predictedLabel = result.classLabel
-            let confidence = prediction.classLabelProbs[result.classLabel] ?? 0.0
+            let confidence = result.classLabelProbs[result.classLabel] ?? 0.0
             label.text = "\(predictedLabel), \(confidence)"
         }
     }
