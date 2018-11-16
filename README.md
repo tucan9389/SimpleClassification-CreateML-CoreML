@@ -1,5 +1,5 @@
 # MyClassification-CreateML-CoreML
-Create ML로 나만의 Classifier 모델을 만들고 Core ML로 앱에서 사용해보는 End-to-End 예제 프로젝트입니다.
+Create ML로 나만의 Classifier 모델을 만들고 Core ML로 앱에서 사용해보는 End-to-End 예제 프로젝트입니다. 
 
 ## 들어가며
 
@@ -82,6 +82,47 @@ $ googleimagesdownload -k "resistor" -l 30
 
 ## 모바일 프로젝트
 
+### 1. 모델 정보 확인
 
+Create ML에서 만든 Core ML 모델을 Xcode에서 열어보면 다음 화면이 나타납니다(①). 이번에 만든 Classification 모델 크기는 165 KB(②), 소스코드상에서 모델을 불러올때는 `ImageClassifier` 클래스를 통해 불러옵니다(③). 이 모델의 입력 포맷은 299Ｘ299 컬러 이미지이며, 출력 포맷에는 카테고리별 확률이 들어간 Dictionary와 가장 높은 확률의 카테고리 이름이 있습니다(④).
+
+![project-coreml-001](images/project-coreml-001.png)
+
+### 2. 추론
+
+앞에서 추가했던 모델(`ImageClassifier`)을 인스턴스로 생성하고, `prediction` 메소드를 호출하여 결과를 받아냅니다.
+
+```swift
+import Vision
+
+// create model
+let model = ImageClassifier()
+
+// predict
+if let result = try? model.prediction(image: pixelBuffer) {
+    let predictedLabel = result.classLabel
+    let confidence = prediction.classLabelProbs[result.classLabel] ?? 0.0
+    label.text = "\(predictedLabel), \(confidence)"
+}
+```
+
+### 3. 모바일 앱 결과
+
+![IMG_0436](images/IMG_0436.PNG)
 
 ## See Also
+
+- [Core ML | Apple Developer Documentation](https://developer.apple.com/documentation/coreml)
+- [Machine Learning - Apple Developer](https://developer.apple.com/machine-learning/)
+- WWDC17 - Core ML 발표자료 
+  - [WWDC17 703 Session - Introducing Core ML](https://developer.apple.com/videos/play/wwdc2017/703/)
+  - [WWDC17 710 Session - Core ML in depth](https://developer.apple.com/videos/play/wwdc2017/710/)
+  - [WWDC17 506 Session - Vision Framework: Building on Core ML](https://developer.apple.com/videos/play/wwdc2017/506)
+- WWDC18 - Core ML 2 발표자료
+  - [WWDC18 708 Session - What’s New in Core ML, Part 1](https://developer.apple.com/videos/play/wwdc2018/708/)
+  - [WWDC18 709 Session - What’s New in Core ML, Part 2](https://developer.apple.com/videos/play/wwdc2018/709/)
+  - [WWDC18 717 Session - Vision with Core ML](https://developer.apple.com/videos/play/wwdc2018/717/)
+- [ML Kit - Firebase](https://developers.google.com/ml-kit/)
+- [Apple's Core ML 2 vs. Google's ML Kit: What's the difference?](https://venturebeat.com/2018/06/05/apples-core-ml-2-vs-googles-ml-kit-whats-the-difference/)
+- [iOS에서 머신러닝 슬라이드 자료](https://docs.google.com/presentation/d/1wA_PAjllpLLcFPuZcERYbQlPe1Ipb-bzIZinZg3zXkg/edit?usp=sharing)
+- [MoTLabs Blog](https://motlabs.github.io/)

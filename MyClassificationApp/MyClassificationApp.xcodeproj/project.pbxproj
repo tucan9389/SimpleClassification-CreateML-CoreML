@@ -12,6 +12,7 @@
 		55DF3E8A21985C520080252C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DF3E8821985C520080252C /* Main.storyboard */; };
 		55DF3E8C21985C540080252C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DF3E8B21985C540080252C /* Assets.xcassets */; };
 		55DF3E8F21985C540080252C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DF3E8D21985C540080252C /* LaunchScreen.storyboard */; };
+		55DFA35D219BD4AE001B23AC /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55DFA35C219BD4AE001B23AC /* ImageClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		55DF3E8E21985C540080252C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55DF3E9021985C540080252C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55DF3E96219866AA0080252C /* TrainingPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TrainingPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		55DFA35C219BD4AE001B23AC /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		55DF3E8321985C520080252C /* MyClassificationApp */ = {
 			isa = PBXGroup;
 			children = (
+				55DFA35C219BD4AE001B23AC /* ImageClassifier.mlmodel */,
 				55DF3E8421985C520080252C /* AppDelegate.swift */,
 				55DF3E8621985C520080252C /* ViewController.swift */,
 				55DF3E8821985C520080252C /* Main.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55DF3E8721985C520080252C /* ViewController.swift in Sources */,
+				55DFA35D219BD4AE001B23AC /* ImageClassifier.mlmodel in Sources */,
 				55DF3E8521985C520080252C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

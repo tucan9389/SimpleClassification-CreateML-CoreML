@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import Vision
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let image: UIImage? = UIImage(named: "arduino")
+        
+        let model = ImageClassifier()
+//        if let prediction = try? model.prediction(image: image) {
+//            return prediction.type
+//        }
     }
 
 
