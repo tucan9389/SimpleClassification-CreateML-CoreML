@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MyClassificationApp
+//  SimpleClassificationApp
 //
 //  Created by GwakDoyoung on 11/11/2018.
 //  Copyright © 2018 tucan9389. All rights reserved.

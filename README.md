@@ -115,7 +115,7 @@ if let result = try? model.prediction(image: pixelBuffer) {
 
 ### 3. 모바일 앱 결과
 
-![IMG_0436](images/IMG_0436.PNG)
+![IMG_0436](images/IMG_0436.PNG){:height="50%" width="50%"}
 
 ## See Also
 

@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55C41430219EE74B00FA0558 /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4142F219EE74B00FA0558 /* UIImage+CVPixelBuffer.swift */; };
+		55C41432219EE8E300FA0558 /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55C41431219EE8E300FA0558 /* ImageClassifier.mlmodel */; };
 		55DF3E8521985C520080252C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF3E8421985C520080252C /* AppDelegate.swift */; };
 		55DF3E8721985C520080252C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF3E8621985C520080252C /* ViewController.swift */; };
 		55DF3E8A21985C520080252C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DF3E8821985C520080252C /* Main.storyboard */; };
 		55DF3E8C21985C540080252C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55DF3E8B21985C540080252C /* Assets.xcassets */; };
 		55DF3E8F21985C540080252C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55DF3E8D21985C540080252C /* LaunchScreen.storyboard */; };
-		55DFA35D219BD4AE001B23AC /* ImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55DFA35C219BD4AE001B23AC /* ImageClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		55DF3E8121985C520080252C /* MyClassificationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyClassificationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C4142F219EE74B00FA0558 /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		55C41431219EE8E300FA0558 /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
+		55DF3E8121985C520080252C /* SimpleClassificationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleClassificationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DF3E8421985C520080252C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55DF3E8621985C520080252C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55DF3E8921985C520080252C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,7 +27,6 @@
 		55DF3E8E21985C540080252C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55DF3E9021985C540080252C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55DF3E96219866AA0080252C /* TrainingPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TrainingPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		55DFA35C219BD4AE001B23AC /* ImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				55DF3E96219866AA0080252C /* TrainingPlayground.playground */,
-				55DF3E8321985C520080252C /* MyClassificationApp */,
+				55DF3E8321985C520080252C /* SimpleClassificationApp */,
 				55DF3E8221985C520080252C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,31 +52,32 @@
 		55DF3E8221985C520080252C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55DF3E8121985C520080252C /* MyClassificationApp.app */,
+				55DF3E8121985C520080252C /* SimpleClassificationApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		55DF3E8321985C520080252C /* MyClassificationApp */ = {
+		55DF3E8321985C520080252C /* SimpleClassificationApp */ = {
 			isa = PBXGroup;
 			children = (
-				55DFA35C219BD4AE001B23AC /* ImageClassifier.mlmodel */,
+				55C41431219EE8E300FA0558 /* ImageClassifier.mlmodel */,
 				55DF3E8421985C520080252C /* AppDelegate.swift */,
 				55DF3E8621985C520080252C /* ViewController.swift */,
+				55C4142F219EE74B00FA0558 /* UIImage+CVPixelBuffer.swift */,
 				55DF3E8821985C520080252C /* Main.storyboard */,
 				55DF3E8B21985C540080252C /* Assets.xcassets */,
 				55DF3E8D21985C540080252C /* LaunchScreen.storyboard */,
 				55DF3E9021985C540080252C /* Info.plist */,
 			);
-			path = MyClassificationApp;
+			path = SimpleClassificationApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55DF3E8021985C520080252C /* MyClassificationApp */ = {
+		55DF3E8021985C520080252C /* SimpleClassificationApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55DF3E9321985C540080252C /* Build configuration list for PBXNativeTarget "MyClassificationApp" */;
+			buildConfigurationList = 55DF3E9321985C540080252C /* Build configuration list for PBXNativeTarget "SimpleClassificationApp" */;
 			buildPhases = (
 				55DF3E7D21985C520080252C /* Sources */,
 				55DF3E7E21985C520080252C /* Frameworks */,
@@ -84,9 +87,9 @@
 			);
 			dependencies = (
 			);
-			name = MyClassificationApp;
+			name = SimpleClassificationApp;
 			productName = MyClassificationApp;
-			productReference = 55DF3E8121985C520080252C /* MyClassificationApp.app */;
+			productReference = 55DF3E8121985C520080252C /* SimpleClassificationApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 55DF3E7C21985C520080252C /* Build configuration list for PBXProject "MyClassificationApp" */;
+			buildConfigurationList = 55DF3E7C21985C520080252C /* Build configuration list for PBXProject "SimpleClassificationApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,7 +120,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55DF3E8021985C520080252C /* MyClassificationApp */,
+				55DF3E8021985C520080252C /* SimpleClassificationApp */,
 			);
 		};
 /* End PBXProject section */
@@ -141,8 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				55DF3E8721985C520080252C /* ViewController.swift in Sources */,
-				55DFA35D219BD4AE001B23AC /* ImageClassifier.mlmodel in Sources */,
+				55C41430219EE74B00FA0558 /* UIImage+CVPixelBuffer.swift in Sources */,
 				55DF3E8521985C520080252C /* AppDelegate.swift in Sources */,
+				55C41432219EE8E300FA0558 /* ImageClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,12 +294,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WXJ4Z4H69;
-				INFOPLIST_FILE = MyClassificationApp/Info.plist;
+				INFOPLIST_FILE = SimpleClassificationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tucan9389.MyClassificationApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tucan9389.SimpleClassificationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -308,12 +312,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WXJ4Z4H69;
-				INFOPLIST_FILE = MyClassificationApp/Info.plist;
+				INFOPLIST_FILE = SimpleClassificationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tucan9389.MyClassificationApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tucan9389.SimpleClassificationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,7 +327,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		55DF3E7C21985C520080252C /* Build configuration list for PBXProject "MyClassificationApp" */ = {
+		55DF3E7C21985C520080252C /* Build configuration list for PBXProject "SimpleClassificationApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55DF3E9121985C540080252C /* Debug */,
@@ -332,7 +336,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55DF3E9321985C540080252C /* Build configuration list for PBXNativeTarget "MyClassificationApp" */ = {
+		55DF3E9321985C540080252C /* Build configuration list for PBXNativeTarget "SimpleClassificationApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55DF3E9421985C540080252C /* Debug */,
