@@ -31,9 +31,16 @@ Create ML로 나만의 Classifier 모델을 만들고 Core ML로 앱에서 사�
 
 ### 3. Create ML 코드 작성
 
-다음 코드를 넣고 ①의 실행 버튼을 누르면 Assistant Editor에 ②처럼 ClassificatierBuilder가 만들어집니다. Assistant Editor는 ③을 클릭하면 나타납니다.<br>![project-createml-007](images/project-createml-007.png)
+다음 코드를 넣고 ①의 실행 버튼을 누르면 Assistant Editor에 ②처럼 ClassificatierBuilder가 만들어집니다. Assistant Editor는 ③을 클릭하면 나타납니다.
 
-***이제 학습을 시킬 준비가 되었습니다!***
+```swift
+import CreateMLUI
+
+let builder = MLImageClassifierBuilder()
+builder.showInLiveView()
+```
+
+![project-createml-007](images/project-createml-007.png)
 
 ### 4. 데이터셋 수집
 
@@ -112,17 +119,20 @@ if let result = try? model.prediction(image: pixelBuffer) {
 
 ## See Also
 
-- [Core ML | Apple Developer Documentation](https://developer.apple.com/documentation/coreml)
 - [Machine Learning - Apple Developer](https://developer.apple.com/machine-learning/)
+- [Create ML | Apple Developer Documentation](https://developer.apple.com/documentation/createml)
+- [Core ML | Apple Developer Documentation](https://developer.apple.com/documentation/coreml)
 - WWDC17 - Core ML 발표자료 
   - [WWDC17 703 Session - Introducing Core ML](https://developer.apple.com/videos/play/wwdc2017/703/)
   - [WWDC17 710 Session - Core ML in depth](https://developer.apple.com/videos/play/wwdc2017/710/)
   - [WWDC17 506 Session - Vision Framework: Building on Core ML](https://developer.apple.com/videos/play/wwdc2017/506)
+  - [WWDC17 208 Session - Natural Language Processing and your Apps](https://developer.apple.com/videos/play/wwdc2017/208)
 - WWDC18 - Core ML 2 발표자료
+  - [WWDC18 703 Session - Introducing Create ML](https://developer.apple.com/videos/play/wwdc2018/703)
   - [WWDC18 708 Session - What’s New in Core ML, Part 1](https://developer.apple.com/videos/play/wwdc2018/708/)
   - [WWDC18 709 Session - What’s New in Core ML, Part 2](https://developer.apple.com/videos/play/wwdc2018/709/)
   - [WWDC18 717 Session - Vision with Core ML](https://developer.apple.com/videos/play/wwdc2018/717/)
-- [ML Kit - Firebase](https://developers.google.com/ml-kit/)
-- [Apple's Core ML 2 vs. Google's ML Kit: What's the difference?](https://venturebeat.com/2018/06/05/apples-core-ml-2-vs-googles-ml-kit-whats-the-difference/)
+  - [WWDC18 713 Session - Introducing Natural Language Framework](https://developer.apple.com/videos/play/wwdc2018/713)
+  - [WWDC18 712 Session - A Guide to Turi Create](https://developer.apple.com/videos/play/wwdc2018/712)
 - [iOS에서 머신러닝 슬라이드 자료](https://docs.google.com/presentation/d/1wA_PAjllpLLcFPuZcERYbQlPe1Ipb-bzIZinZg3zXkg/edit?usp=sharing)
 - [MoTLabs Blog](https://motlabs.github.io/)
